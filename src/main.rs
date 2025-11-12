@@ -1,13 +1,12 @@
 use std::{thread, time::Duration};
 
-use WGPU_Returns::run;
+use wgpu_returns::run;
 
 fn main() {
     println!("Start!");
 
-    test_2();
     run().unwrap();
-
+    
     println!("Done!");
 }
 

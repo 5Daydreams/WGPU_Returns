@@ -1,0 +1,5 @@
+
+# Enable the required features
+[wasm-opt]
+enabled = true
+extra-args = ["--enable-bulk-memory", "--enable-nontrapping-float-to-int"]

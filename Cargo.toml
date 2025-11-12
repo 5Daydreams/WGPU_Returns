@@ -1,22 +1,22 @@
 [package]
-name = "WGPU_Returns"
+name = "wgpu_returns"
 version = "0.1.0"
 edition = "2024"
 resolver = "2"
 
-[lib]
-crate-type = ["cdylib", "rlib"]
+# [lib]
+# crate-type = ["cdylib", "rlib"]
 
 # This should go in the Cargo.toml in the root directory
 [profile.release]
 strip = true
 
 [[bin]]
-name = "tutorial1-window"
+name = "wgpu_returns"
 path = "src/main.rs"
 
-[package.metadata.wasm-bindgen]
-features = ["bulk-memory", "nontrapping-float-to-int"]
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = true
 
 [dependencies]
 anyhow = "1.0"
